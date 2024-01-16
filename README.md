@@ -1,4 +1,4 @@
-# petfi - Pets Adoption Platform
+# PetFi - Pets Adoption Platform
 
 Welcome to the documentation for the petfi project - a platform dedicated to pet adoption. Below, you will find information about the project's frontend, backend, and instructions on how to set up and run the application.
 
@@ -90,8 +90,5 @@ The website is divided into the following sections:
 - **Product Add Section**: Add new pets for adoption.
 - **Product Manage Section**: Manage existing pet listings.
 
-## Documentation
-
-For a smooth setup and execution of the application, follow the steps mentioned above under the "Frontend" and "Backend" sections.
 
 Feel free to reach out if you encounter any issues or have questions. Happy pet adopting! 🐾
