@@ -43,7 +43,6 @@ export const logout = async (req, res) => {
 		httpOnly: true,
 		expires: new Date(Date.now()),
 	});
-
 	return res.status(StatusCodes.OK).json({
 		status: true,
 		message: 'Logged out successfully',
@@ -63,5 +62,13 @@ export const addPet = async (req, res) => {
 	return res.status(StatusCodes.OK).json({
 		status: true,
 		message: 'Pet added successfully',
+	});
+};
+
+export const getAllPets = async (req, res) => {
+	const pets = await Pet.find();
+	return res.status(StatusCodes.OK).json({
+		status: true,
+		pets,
 	});
 };

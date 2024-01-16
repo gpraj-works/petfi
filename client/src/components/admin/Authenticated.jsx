@@ -2,13 +2,14 @@ import { useDispatch } from 'react-redux';
 import { useGetAdmin } from '../../hooks/useAdmin';
 import { Navigate, Outlet } from 'react-router-dom';
 import { updateAdmin } from '../../toolkit/slices/utilsSlice';
+import Loading from './Loading';
 
 const Authenticated = () => {
 	const dispatch = useDispatch();
 	const { data, isLoading, error } = useGetAdmin();
-
+	
 	if (isLoading) {
-		return '';
+		return <Loading />;
 	}
 
 	if (!error?.response?.data?.status) {

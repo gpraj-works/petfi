@@ -4,13 +4,28 @@ const PetsSchema = new mongoose.Schema(
 	{
 		name: String,
 		breedType: String,
-		locatedIn: String,
+		locatedIn: {
+			type: String,
+			require: true,
+		},
 		age: String,
-		category: String,
+		category: {
+			type: String,
+			require: true,
+		},
 		disability: String,
-		description: String,
-		thumbnail: String,
-		photos: Array,
+		description: {
+			type: String,
+			require: true,
+		},
+		thumbnail: {
+			type: String,
+			require: true,
+		},
+		photos: {
+			type: Array,
+			require: true,
+		},
 	},
 	{ timestamps: true }
 );

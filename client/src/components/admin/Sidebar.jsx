@@ -6,7 +6,7 @@ const Sidebar = () => {
 
 	const logout = async () => {
 		try {
-			await server.get('admin/add-pet');
+			await server.get('admin/logout');
 			navigate('/admin');
 		} catch (error) {
 			console.log(error);
@@ -32,7 +32,7 @@ const Sidebar = () => {
 					Add pets
 				</Link>
 				<Link
-					to='/admin/dashboard/manage-pets'
+					to='/admin/manage-pets'
 					className='inline-flex items-center px-4 py-2 hover:bg-gray-100 rounded-lg'
 				>
 					<div className='grid place-items-center mr-4'>

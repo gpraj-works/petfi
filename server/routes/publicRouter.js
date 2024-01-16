@@ -3,6 +3,6 @@ import { allPets } from '../controllers/publicController.js';
 
 const routes = Router();
 
-routes.get('/all-pets', allPets);
+routes.get('/all-pets/:category', allPets);
 
 export default routes;

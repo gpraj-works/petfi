@@ -29,7 +29,7 @@ const Categories = () => {
 	return (
 		<div className='flex justify-center mt-4'>
 			<div className='inline-flex md:flex-row flex-wrap md:flex-nowrap md:justify-evenly md:gap-0 gap-3 items-center md:w-8/12 md:bg-white md:shadow-md p-2 rounded-full'>
-				<Button title='Cates' state='cates' />
+				<Button title='Cats' state='cats' />
 				<Button title='Dogs' state='dogs' />
 				<Button title='Rabbits' state='rabbits' />
 				<Button title='All pets' state='all-pets' />
