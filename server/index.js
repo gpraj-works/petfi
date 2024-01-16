@@ -14,7 +14,7 @@ const port = 3001;
 
 await dbConnect();
 
-app.use(cors({ origin: ['http://localhost:5173'], credentials: true }));
+app.use(cors({ origin: ['https://petfi.vercel.app'], credentials: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -27,3 +27,5 @@ app.use('/api/public', publicRouter);
 app.use('/', (req, res) => res.json({ message: 'Welcome to our server!' }));
 
 app.listen(port, () => console.log('Server running..!'));
+
+export default app;
