@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Layout } from './Layout';
 import { isMobile } from 'react-device-detect';
+import { newUrl } from '../assets';
 
 const AboutSection = () => {
 	const [moreDetail, setMoreDetail] = useState(false);
@@ -11,13 +12,13 @@ const AboutSection = () => {
 				<div className='md:w-6/12 flex gap-3'>
 					<div className='mb-6'>
 						<img
-							src='./src/assets/img/about-1.jpg'
+							src={newUrl('about-2.jpg')}
 							className='w-full h-full rounded-lg'
 						/>
 					</div>
 					<div className='mt-6'>
 						<img
-							src='./src/assets/img/about-2.jpg'
+							src={newUrl('about-1.jpg')}
 							className='w-full h-full rounded-lg'
 						/>
 					</div>

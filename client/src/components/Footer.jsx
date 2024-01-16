@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { newUrl } from '../assets';
 
 const Footer = () => {
 	return (
@@ -6,7 +7,7 @@ const Footer = () => {
 			<div className='py-3 px-5 flex md:justify-between justify-center items-center w-full'>
 				<div className='flex items-center gap-2'>
 					<div className='w-10 h-10'>
-						<img src='./src/assets/logo-light.svg' className='w-auto h-auto' />
+						<img src={newUrl('logo-2.svg')} className='w-auto h-auto' />
 					</div>
 					<span className='font-extrabold text-3xl text-white'>PetFi</span>
 				</div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
+import { newUrl } from '../assets';
 
 const HomeHeader = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -24,9 +25,7 @@ const HomeHeader = () => {
 					<div className='flex items-center gap-2'>
 						<div className='w-10 h-10'>
 							<img
-								src={`${
-									isScrolled ? './petfi.svg' : './src/assets/logo-light.svg'
-								}`}
+								src={newUrl(isScrolled ? 'logo-1.svg' : 'logo-2.svg')}
 								className='w-auto h-auto'
 							/>
 						</div>
@@ -49,14 +48,10 @@ const HomeHeader = () => {
 			<div className='relative z-0'>
 				<div>
 					<video autoPlay loop muted className='w-screen'>
-						{isMobile ? (
-							<source src='./src/assets/intro-vertical.mp4' type='video/mp4' />
-						) : (
-							<source
-								src='./src/assets/intro-horizontal.mp4'
-								type='video/mp4'
-							/>
-						)}
+						<source
+							src={newUrl(isMobile ? 'header-v.mp4' : 'header-h.mp4')}
+							type='video/mp4'
+						/>
 						Your browser does not support the video tag.
 					</video>
 					<div className='absolute left-0 right-0 top-0 bottom-0 bg-black bg-opacity-60'></div>
