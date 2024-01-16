@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { server } from '../../utils/server';
+import { newUrl } from '../../assets';
 
 const Login = () => {
 	const navigate = useNavigate();
 
 	const initialValues = {
-		email: 'admin@petfi.com',
-		password: 'admin123',
+		email: '',
+		password: '',
 	};
 
 	const [values, setValues] = useState(initialValues);
@@ -36,7 +37,7 @@ const Login = () => {
 					<form className='space-y-4 md:space-y-6' onSubmit={loginAccount}>
 						<div className='flex items-center gap-2'>
 							<div className='w-10 h-10'>
-								<img src='./petfi.svg' className='w-auto h-auto' />
+								<img src={newUrl('logo-1.svg')} className='w-auto h-auto' />
 							</div>
 							<span className='font-extrabold text-3xl text-primary-500'>
 								PetFi

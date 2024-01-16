@@ -33,7 +33,6 @@ const Dashboard = () => {
 
 		for (let key in uploads) {
 			const url = await fileUpload(e.target.files[key]);
-			// console.log(e.target.files[key]);
 			if (url) photos.push(url);
 		}
 		setValues({ ...values, photos });

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { server } from '../../utils/server';
+import { newUrl } from '../../assets';
 
 const Sidebar = () => {
 	const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Sidebar = () => {
 		<div className='sticky top-0 flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 h-[97vh] w-[20%] p-4 shadow-xl m-3'>
 			<div className='flex items-center gap-2'>
 				<div className='w-10 h-10'>
-					<img src='../petfi.svg' className='w-auto h-auto' />
+					<img src={newUrl('logo-1.svg')} className='w-auto h-auto' />
 				</div>
 				<span className='font-extrabold text-3xl text-primary-500'>PetFi</span>
 			</div>
